@@ -1,0 +1,151 @@
+#body-home {
+  background: url("/assets/img/paysage.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px; }
+
+/************** NAVBAR **************/
+.cont-header {
+  background-color: #6aaa54;
+  text-align: center;
+  max-height: 70px; }
+  .cont-header-img {
+    margin: 10px;
+    z-index: 30;
+    position: relative; }
+
+.navbar {
+  background-color: #6aaa54; }
+
+/************** TITLE ***************/
+.title-op {
+  font-family: "Cinzel", serif;
+  text-align: center;
+  color: white;
+  font-size: 100px;
+  margin-top: 20px; }
+
+.subtitle-op {
+  font-family: "Open Sans Condensed", serif;
+  text-align: center;
+  color: white;
+  font-size: 35px; }
+
+.subtitle-ap {
+  margin-top: 20px;
+  font-family: "Open Sans Condensed", serif;
+  text-align: center;
+  color: #4e4e4e;
+  font-size: 35px;
+  text-transform: uppercase; }
+
+.tusersarien {
+  opacity: 0; }
+
+/************** BODY **************/
+.image-destination {
+  position: relative;
+  margin-top: 10px; }
+
+.carde-img {
+  margin-bottom: 0px; }
+.carde-text {
+  background: linear-gradient(to top, black, transparent), linear-gradient(to bottom, transparent, transparent);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 250px; }
+.carde-title {
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Open Sans Condensed", serif;
+  font-size: 2em;
+  color: white;
+  margin-top: 150px; }
+
+.framprix-jesaisplus {
+  float: right;
+  text-align: center;
+  margin: 10px; }
+
+/************** DESTINATIONS **************/
+#background-row {
+  background: magenta; }
+
+.subtitle-desti {
+  font-family: "Open Sans Condensed", serif;
+  font-size: 26px;
+  color: white;
+  text-align: center; }
+
+#box-desti {
+  background-color: #6aaa54;
+  padding: 5px;
+  box-shadow: 5px 5px 5px grey; }
+
+#box-desti-price {
+  background-color: #6aaa54;
+  padding: 5px;
+  box-shadow: 5px 5px 5px grey;
+  font-weight: bold;
+  margin-top: 16px; }
+
+#body-view-Paris {
+  background: url("/assets/img/Paris.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px; }
+#body-view-Ajaccio {
+  background: url("/assets/img/Ajaccio.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px; }
+#body-view-Newyork {
+  background: url("/assets/img/Newyork.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px; }
+#body-view-Tokyo {
+  background: url("/assets/img/Tokyo.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px; }
+#body-view-Sydney {
+  background: url("/assets/img/Sydney.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px; }
+
+/************** FOOTER **************/
+.footer-op {
+  /*  position: absolute; */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: #6aaa54; }
+
+#copyR {
+  padding-top: 15px;
+  font-size: 14px;
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  color: white; }
+
+/*# sourceMappingURL=styles.css.map */

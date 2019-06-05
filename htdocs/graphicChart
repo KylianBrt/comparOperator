@@ -1,0 +1,44 @@
+1/ Logo personnalisé de couleur verte et blanche.
+2/ Couleur principal du site => VERT / BLANC / NOIR (très léger).
+3/ Police d'écriture des titres principals => Cinzel.
+4/ Police d'écriture des titres secondaires => Open Sans Condensed. 
+4/ Utilisation du trait d'union pour toutes conventions de nomages de fichier ou de classes.
+5/ Incorporation d'image pour les différentes destinations.
+6/ Image interactif permettant d'accéder aux différents tours opérateurs selon la destination voulu.
+7/ 
+8/ Utilisation d'objet pour relier les différentes destinations. (POO)
+9/ Image de destinations enregistrée dans la base de données via un lien.
+10/ Navbar & Footer utilisée sur toutes les pages du site.
+11/ Méthode SCSS utilisée.
+12/ Architecture du projet clair et organisée.
+13/
+
+
+
+PRETTY VAR_DUMP : highlight_string("<?php\n\$data =\n" . var_export($data, true) . ";\n?>");
+
+$manager = new Manager($bdd);
+                $tests = $manager->getAllDestination();
+
+                foreach ($tests as $test) {
+                    $takeDestination = $manager->getDestination($test['id']);
+                    foreach($takeDestination as $tkDestination){
+                        $nomvariable = 'destination' . $tkDestination['id'];
+                        $$nomvariable = new Destination($tkDestination);
+                    }
+                    ?>
+                    <div class="col-lg-3 col-md-2 carde">
+                        <form action="viewDestinations.php" method="get" name="viewDestination<?= $test['id'] ?>">
+                            <div class="image-destination">
+                                <input type="hidden" class="add-destination" name="destination" id="destination" value="<?= $test['id'] ?>">
+                                <img src="../assets/img/<?php echo $test['img'] ?>" width="100%" height="250px" class="carde-img">
+                                <div class="carde-text" onClick="viewDestination<?= $test['id'] ?>.submit();">
+                                    <?php $destination = new Destination($test['location']);
+                                    ?><div class="carde-title"> <?php echo $destination->getLocation(); ?></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div><?php
+                    }
+                    ?>
+
