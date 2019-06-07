@@ -11,9 +11,7 @@ foreach ($destinations as $destination) {
     $operatorName = "operator" . $destination['id_tour_operator'];
     $location = new Destination($destination['id'], $destination['location'], $destination['price'], $destination['id_tour_operator'], $destination['img']);
     $$operatorName = new TourOperator($destination['id_tour_operator'], $destination['name'], $destination['grade'], $destination['link'], $destination['is_premium']);
-    echo $$operatorName->getName();
 }
-
 
 ?>
 
@@ -44,31 +42,75 @@ foreach ($destinations as $destination) {
         </header>
         <h2 class="subtitle-ap">Faites vous plaisir !</h2>
         <hr>
-
         <div class="container">
-            <div class="row justify-content-center" id="background-row">
+            <div class="row justify-content-center">
                 <div class="col-sm-4">
-                    <p class="subtitle-desti" id="box-desti"> Voyager pour <?php echo $destination['location']; ?> &#9992;</p>
+                    <p class="subtitle-desti"> Voyager pour <?php echo $destination['location']; ?></p>
                 </div>
 
-                <div class="col-sm-7">
-                    <p class="subtitle-desti" id="box-desti"> Tours Opérateurs </p>
+                <div class="col-sm-7 col-7">
+                    <p class="subtitle-desti"> Tours Opérateurs </p>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-sm-4 view-Destination-img">
-                        <img src="/assets/img/<?= $destination['img'] ?>" width="100%">
-                    </div>
-                    <div class="col-sm-7cd">
-                        <p class="subtitle-desti" id="box-desti"> COMBLER TOURS OPERATOR</p>
+                <div class="col-sm-4">
+                    <img src="/assets/img/<?= $destination['img'] ?>" width="100%">
+                </div>
+                <div class="col-sm-7">
+                    <!-- <p>//$$operatorName->getName();</p> -->
+                    <div class="row justify-content-center">
+                        <div class="col-sm-6 text-edit-color">
+                            <div class="text-edit-title">Agence de voyage</div>
+                            <hr>
+                            <?php
+                            foreach ($destinations as $destination) {
+                                $operatorName = "operator" . $destination['id_tour_operator'];
+                                $location = new Destination($destination['id'], $destination['location'], $destination['price'], $destination['id_tour_operator'], $destination['img']);
+                                $$operatorName = new TourOperator($destination['id_tour_operator'], $destination['name'], $destination['grade'], $destination['link'], $destination['is_premium']);
+                                echo '
+                                <form action="viewReview.php" method="get" name="viewReview' . $destination['name'] . '">
+                                    <input type="hidden" class="view-review" name="review" id="review" value="' . $destination['name'] . '">
+                                    <div class="text-edit" onClick="viewReview' . $destination['name'] . '.submit();">' . $$operatorName->getName() . '</div>
+                                </form>
+                                ';
+                            }
+                            ?>
+                        </div>
+                        <div class="col-sm-3 text-edit-color-2">
+                            <div class="text-edit-title">Prix</div>
+                            <hr>
+                            <?php
+                            foreach ($destinations as $destination) {
+                                echo '<div class="text-edit">' . $destination['price'] . ' €</div>';
+                            }
+                            ?>
+                        </div>
+                        <div class="col-sm-2 text-edit-color-3">
+                            <div class="text-edit-title">Avis</div>
+                            <hr>
+                            <?php
+                            foreach ($destinations as $destination) {
+                                if ($destination['grade'] == 5) {
+                                    echo '<div class="text-edit-star"> ★★★★★ </div>';
+                                } else if ($destination['grade'] == 4) {
+                                    echo '<div class="text-edit-star"> ★★★★ </div>';
+                                } else if ($destination['grade'] == 3) {
+                                    echo '<div class="text-edit-star"> ★★★ </div>';
+                                } else if ($destination['grade'] == 2) {
+                                    echo '<div class="text-edit-star"> ★★ </div>';
+                                } else if ($destination['grade'] == 1) {
+                                    echo '<div class="text-edit-star"> ★ </div>';
+                                }
+                            }
+                            ?>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="row justify-content-center" id="background-row">
                 <div class="col-sm-4">
-                    <p class="subtitle-desti" id="box-desti-price"> <?= $destination['price']; ?> €</p>
+                    <!-- <p class="subtitle-desti-color-white">prixphp €</p> -->
                 </div>
                 <div class="col-sm-7">
-                    <p class="subtitle-desti" id="box-desti-price"> COMBLER TOURS OPERATOR</p>
+
                 </div>
             </div>
         </div>

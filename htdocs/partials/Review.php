@@ -7,28 +7,31 @@ class Review {
     private $author;
     private $id_tour_operator;
 
-    public function __construct()
+    public function __construct($id, $message, $author, $id_tour_operator)
     {
-        //AAA
+        $this->id = $id;
+        $this->message = $message;
+        $this->author = $author;
+        $this->id_tour_operator = $id_tour_operator;
     }
 
     public function getId()
     {
-        //AAA
+        return $this->id;
     }
 
     public function getMessage()
     {
-        //AAA
+        return $this->message;
     }
 
     public function getAuthor()
     {
-        //AAA
+        return $this->author;
     }
 
     public function getId_tour_operator()
     {
-        //AAA
+        return $this->id_tour_operator;
     }
 }

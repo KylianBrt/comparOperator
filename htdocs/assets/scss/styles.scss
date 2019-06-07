@@ -1,3 +1,5 @@
+@import "_form.scss";
+
 #body-home {
   background: url("/assets/img/paysage.jpg");
   background-attachment: fixed;
@@ -5,33 +7,88 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 500px;
+  overflow-x: hidden;
 }
 
 /************** NAVBAR **************/
 .cont-header {
   background-color: #6aaa54;
   text-align: center;
-  max-height: 70px; 
+  max-height: 70px;
   &-img {
     margin: 10px;
     z-index: 30;
     position: relative;
   }
 }
-// .cont-header-menu-text{
-//   background-color: red;
-// }
+
+.cont {
+  color: white;
+  &-header {
+    color: white;
+    &-menu {
+      background-color: #009847;
+      &-text {
+        color: white;
+      }
+    }
+  }
+}
+
+.text-edit {
+  font-family: 'Quicksand', sans-serif;
+  margin-left: 20px;
+  font-size: 20px;
+  text-align: center;
+  &-star{
+    font-family: 'Quicksand', sans-serif;
+    margin-left: 20px;
+    font-size: 20px;
+  }
+
+  &-color {
+    cursor: pointer;
+    background-color: none;
+    &-2 {
+      background-color: none;
+    }
+    &-3 {
+      background-color: none;
+    }
+  }
+  &:hover {
+    background-color: #efeeee;
+  }
+
+  &-title {
+    font-size: 30px;
+    font-family: "Open Sans Condensed", serif;
+    text-align: center;
+  }
+}
 
 .navbar {
   background-color: #6aaa54;
+  &-link {
+    color: white;
+    padding: 5px;
+    background-color: #6aaa54;
+    margin-left: 10px;
+    &:hover {
+      text-decoration: none;
+      color: #4e4e4e;
+      background-color: #cfffd2;
+    }
+  }
 }
+
 /************** TITLE ***************/
 
 .title-op {
   font-family: "Cinzel", serif;
   text-align: center;
   color: white;
-  font-size: 100px;
+  font-size: 6vw;
   margin-top: 20px;
 }
 
@@ -39,16 +96,18 @@
   font-family: "Open Sans Condensed", serif;
   text-align: center;
   color: white;
-  font-size: 35px;
+  font-size: 3vw;
 }
 
 .subtitle-ap {
-  margin-top: 20px;
   font-family: "Open Sans Condensed", serif;
   text-align: center;
-  color: #4e4e4e;
+  color: white;
   font-size: 35px;
   text-transform: uppercase;
+  background-color: #6aaa54;
+  padding: 10px;
+  margin-top: 0;
 }
 
 .tusersarien {
@@ -73,6 +132,7 @@
     top: 0;
     left: 0;
     width: 100%;
+    cursor: pointer;
     height: 250px;
   }
 
@@ -84,6 +144,7 @@
     font-size: 2em;
     color: white;
     margin-top: 150px;
+    cursor: pointer;
   }
 }
 
@@ -94,32 +155,33 @@
     margin: 10px;
   }
 }
-/************** DESTINATIONS **************/
 
-#background-row{
-  background:magenta;
+#prev-icon {
+  background-color: #6aaa54;
 }
+
+#carouseltamere {
+  margin: auto;
+  width: 400px;
+}
+
+/*************** CAROUSEL ******************/
+
+/************** DESTINATIONS **************/
 
 .subtitle-desti {
   font-family: "Open Sans Condensed", serif;
   font-size: 26px;
   color: white;
   text-align: center;
-  
-}
-
-#box-desti {
   background-color: #6aaa54;
-  padding: 5px;
-  box-shadow: 5px 5px 5px grey;
-}
-
-#box-desti-price{
-  background-color: #6aaa54;
-  padding: 5px;
-  box-shadow: 5px 5px 5px grey;
-  font-weight: bold;
-  margin-top: 16px;
+  &-color-white {
+    color: #4e4e4e;
+    font-family: "Open Sans Condensed", serif;
+    font-size: 26px;
+    text-align: center;
+    font-size: 50px;
+  }
 }
 
 #body-view {
@@ -154,4 +216,67 @@
   text-align: center;
   font-family: "Quicksand", sans-serif;
   color: white;
+}
+
+/**********VIEW REVIEW **************/
+.view {
+  color: white;
+  &-review {
+    color: white;
+    &-user {
+      height: 30vh;
+      font-size: 20px;
+    }
+  }
+}
+
+.review-op {
+  text-align: center;
+}
+
+#icon-op{
+  font-size: 1.3em;
+}
+
+.comment-op{
+  font-family: 'Quicksand', sans-serif;
+}
+
+/**********ADMIN **************/
+
+.admin {
+  &-card {
+    margin-top: 50px;
+    &-inter {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      background-color: #F3F3F3;
+      &-p {
+        margin: 15px;
+        color: color;
+        text-align: center;
+        font-size: 20px;
+        font-family: "Quicksand", sans-serif;
+        text-transform: uppercase;
+      }
+      &-input {
+        color: black;
+      }
+      &-destination{
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        margin-top: 30px;
+        background-color: #F3F3F3;
+      }
+    }
+  }
+}
+
+.pp {
+  margin: 15px;
+  color: black;
+  text-align: center;
+  font-size: 50px;
+  font-family: "Quicksand", sans-serif;
+  text-transform: uppercase;
 }

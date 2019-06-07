@@ -1,10 +1,74 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.3/css/mdb.min.css);
+.hm-gradient {
+  background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%); }
+
+.darken-grey-text {
+  color: #2E2E2E; }
+
+.danger-text {
+  color: #ff3547; }
+
+.default-text {
+  color: #2BBBAD; }
+
+.info-text {
+  color: #33b5e5; }
+
+.form-white .md-form label {
+  color: #fff; }
+
+.form-white input[type=text]:focus:not([readonly]) {
+  border-bottom: 1px solid #fff;
+  -webkit-box-shadow: 0 1px 0 0 #fff;
+  box-shadow: 0 1px 0 0 #fff; }
+
+.form-white input[type=text]:focus:not([readonly]) + label {
+  color: #fff; }
+
+.form-white input[type=password]:focus:not([readonly]) {
+  border-bottom: 1px solid #fff;
+  -webkit-box-shadow: 0 1px 0 0 #fff;
+  box-shadow: 0 1px 0 0 #fff; }
+
+.form-white input[type=password]:focus:not([readonly]) + label {
+  color: #fff; }
+
+.form-white input[type=password], .form-white input[type=text] {
+  border-bottom: 1px solid #fff; }
+
+.form-white .form-control:focus {
+  color: #fff; }
+
+.form-white .form-control {
+  color: #fff; }
+
+.form-white textarea.md-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #fff;
+  box-shadow: 0 1px 0 0 #fff;
+  color: #fff; }
+
+.form-white textarea.md-textarea {
+  border-bottom: 1px solid #fff;
+  color: #fff; }
+
+.form-white textarea.md-textarea:focus:not([readonly]) + label {
+  color: #fff; }
+
+.ripe-malinka-gradient {
+  background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%); }
+
+.near-moon-gradient {
+  background-image: linear-gradient(to bottom, #5ee7df 0%, #b490ca 100%); }
+
 #body-home {
   background: url("/assets/img/paysage.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 500px; }
+  height: 500px;
+  overflow-x: hidden; }
 
 /************** NAVBAR **************/
 .cont-header {
@@ -16,30 +80,73 @@
     z-index: 30;
     position: relative; }
 
+.cont {
+  color: white; }
+  .cont-header {
+    color: white; }
+    .cont-header-menu {
+      background-color: #009847; }
+      .cont-header-menu-text {
+        color: white; }
+
+.text-edit {
+  font-family: 'Quicksand', sans-serif;
+  margin-left: 20px;
+  font-size: 20px;
+  text-align: center; }
+  .text-edit-star {
+    font-family: 'Quicksand', sans-serif;
+    margin-left: 20px;
+    font-size: 20px; }
+  .text-edit-color {
+    cursor: pointer;
+    background-color: none; }
+    .text-edit-color-2 {
+      background-color: none; }
+    .text-edit-color-3 {
+      background-color: none; }
+  .text-edit:hover {
+    background-color: #efeeee; }
+  .text-edit-title {
+    font-size: 30px;
+    font-family: "Open Sans Condensed", serif;
+    text-align: center; }
+
 .navbar {
   background-color: #6aaa54; }
+  .navbar-link {
+    color: white;
+    padding: 5px;
+    background-color: #6aaa54;
+    margin-left: 10px; }
+    .navbar-link:hover {
+      text-decoration: none;
+      color: #4e4e4e;
+      background-color: #cfffd2; }
 
 /************** TITLE ***************/
 .title-op {
   font-family: "Cinzel", serif;
   text-align: center;
   color: white;
-  font-size: 100px;
+  font-size: 6vw;
   margin-top: 20px; }
 
 .subtitle-op {
   font-family: "Open Sans Condensed", serif;
   text-align: center;
   color: white;
-  font-size: 35px; }
+  font-size: 3vw; }
 
 .subtitle-ap {
-  margin-top: 20px;
   font-family: "Open Sans Condensed", serif;
   text-align: center;
-  color: #4e4e4e;
+  color: white;
   font-size: 35px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  background-color: #6aaa54;
+  padding: 10px;
+  margin-top: 0; }
 
 .tusersarien {
   opacity: 0; }
@@ -57,6 +164,7 @@
   top: 0;
   left: 0;
   width: 100%;
+  cursor: pointer;
   height: 250px; }
 .carde-title {
   position: relative;
@@ -65,34 +173,35 @@
   font-family: "Open Sans Condensed", serif;
   font-size: 2em;
   color: white;
-  margin-top: 150px; }
+  margin-top: 150px;
+  cursor: pointer; }
 
 .framprix-jesaisplus {
   float: right;
   text-align: center;
   margin: 10px; }
 
-/************** DESTINATIONS **************/
-#background-row {
-  background: magenta; }
+#prev-icon {
+  background-color: #6aaa54; }
 
+#carouseltamere {
+  margin: auto;
+  width: 400px; }
+
+/*************** CAROUSEL ******************/
+/************** DESTINATIONS **************/
 .subtitle-desti {
   font-family: "Open Sans Condensed", serif;
   font-size: 26px;
   color: white;
-  text-align: center; }
-
-#box-desti {
-  background-color: #6aaa54;
-  padding: 5px;
-  box-shadow: 5px 5px 5px grey; }
-
-#box-desti-price {
-  background-color: #6aaa54;
-  padding: 5px;
-  box-shadow: 5px 5px 5px grey;
-  font-weight: bold;
-  margin-top: 16px; }
+  text-align: center;
+  background-color: #6aaa54; }
+  .subtitle-desti-color-white {
+    color: #4e4e4e;
+    font-family: "Open Sans Condensed", serif;
+    font-size: 26px;
+    text-align: center;
+    font-size: 50px; }
 
 #body-view-Paris {
   background: url("/assets/img/Paris.jpg");
@@ -147,5 +256,53 @@
   text-align: center;
   font-family: "Quicksand", sans-serif;
   color: white; }
+
+/**********VIEW REVIEW **************/
+.view {
+  color: white; }
+  .view-review {
+    color: white; }
+    .view-review-user {
+      height: 30vh;
+      font-size: 20px; }
+
+.review-op {
+  text-align: center; }
+
+#icon-op {
+  font-size: 1.3em; }
+
+.comment-op {
+  font-family: 'Quicksand', sans-serif; }
+
+/**********ADMIN **************/
+.admin-card {
+  margin-top: 50px; }
+  .admin-card-inter {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    background-color: #F3F3F3; }
+    .admin-card-inter-p {
+      margin: 15px;
+      color: color;
+      text-align: center;
+      font-size: 20px;
+      font-family: "Quicksand", sans-serif;
+      text-transform: uppercase; }
+    .admin-card-inter-input {
+      color: black; }
+    .admin-card-inter-destination {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      margin-top: 30px;
+      background-color: #F3F3F3; }
+
+.pp {
+  margin: 15px;
+  color: black;
+  text-align: center;
+  font-size: 50px;
+  font-family: "Quicksand", sans-serif;
+  text-transform: uppercase; }
 
 /*# sourceMappingURL=styles.css.map */
